@@ -309,8 +309,9 @@
             <h1 id="Leetcode_312-Burst_Balloons"><a href="#Leetcode_312-Burst_Balloons" class="headerlink" title="Leetcode 312.Burst Balloons"></a>Leetcode 312.Burst Balloons</h1><p><a href="https://leetcode.com/problems/burst-balloons/" target="_blank" rel="external">312.Burst Balloons</a>的题目大意为：</p>
 <p>有n个气球, 顺序编号为0~n-1. 如果戳破编号为i的气球, 你可以获得数量为<font color="red"> nums[left]*nums[i]*nums[right]</font>的硬币. left和right代表气球i相邻的气球编号, 气球i戳破之后, left和right便是相邻的了. 找出你可以获得的最大硬币数量.</p>
 <h2 id="Naive_u7684_u60F3_u6CD5"><a href="#Naive_u7684_u60F3_u6CD5" class="headerlink" title="Naive的想法"></a>Naive的想法</h2><p>首先我想, 如何保存状态?<br>假设4个气球数值为[3, 1, 5, 8]. 如果戳破3, 变为[1, 5, 8]. 如果戳破1, 变为[3, 5, 8]. 起初想用一位数(0或1)来表示气球是否被戳破. [3, 1, 5, 8]状态表示为(1, 1, 1, 1);[1, 5, 8]状态表示为(0, 1, 1, 1).[3, 5, 8]状态表示为(1, 0, 1, 1). 这样可以由状态(1, 1, 1, 1)转移到状态(0, 1, 1, 1)或(1, 0, 1, 1).<br>但是500个气球岂不是要大小为2^500的数来表示？遍历完每个状态的时间复杂度为O(2^n). 这样显然有问题.</p>
-<h2 id="u8054_u60F3_u5230_u77E9_u9635_u94FE_u4E58_u6CD5_u95EE_u9898"><a href="#u8054_u60F3_u5230_u77E9_u9635_u94FE_u4E58_u6CD5_u95EE_u9898" class="headerlink" title="联想到矩阵链乘法问题"></a>联想到矩阵链乘法问题</h2><p>以前见到过一道DP问题——矩阵链乘法和此题很像。<br><img src="http://7xrhtv.com1.z0.glb.clouddn.com/matrixmul.png =80x" alt="MatrixM"></p>
-<p>n个矩阵相乘, 因为不同的计算顺序会导致乘法计算次数不同。例如下图所示, 先计算A1*A2和先计算A2*A3的结果不同.<br><img src="http://7xrhtv.com1.z0.glb.clouddn.com/matix_example.png =50x" alt="Mexample"><br>那么如何选择计算顺序使得计算量最小?</p>
+<h2 id="u8054_u60F3_u5230_u77E9_u9635_u94FE_u4E58_u6CD5_u95EE_u9898"><a href="#u8054_u60F3_u5230_u77E9_u9635_u94FE_u4E58_u6CD5_u95EE_u9898" class="headerlink" title="联想到矩阵链乘法问题"></a>联想到矩阵链乘法问题</h2><p>以前见到过一道DP问题——矩阵链乘法和此题很像。<br><img src="http://7xrhtv.com1.z0.glb.clouddn.com/matrixmul.png" alt="MatrixM"></p>
+<p>n个矩阵相乘, 因为不同的计算顺序会导致乘法计算次数不同。例如下图所示, 先计算A1*A2和先计算A2*A3的结果不同.<br><img src="http://7xrhtv.com1.z0.glb.clouddn.com/matix_example.png" alt="Mexample"></p>
+<p>那么如何选择计算顺序使得计算量最小?</p>
 <p>用dp[i, j]表示Ai*A(i+1)* …*Aj的最优值, 有状态转移方程:</p>
 <font color="red">dp[i, j] = min{dp[i, k] + dp[k + 1, j] + p[i - 1] * p[k] * p[j]}</font>
 
