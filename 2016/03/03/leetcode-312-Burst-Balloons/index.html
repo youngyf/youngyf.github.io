@@ -63,13 +63,13 @@ Naiv">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Leetcode 312.Burst Balloons">
 <meta property="og:url" content="http://yoursite.com/2016/03/03/leetcode-312-Burst-Balloons/index.html">
-<meta property="og:site_name" content="Youngyf">
+<meta property="og:site_name" content="YOUNG's BLOG">
 <meta property="og:description" content="Leetcode 312.Burst Balloons312.Burst Balloons的题目大意为：
 有n个气球, 顺序编号为0~n-1. 如果戳破编号为i的气球, 你可以获得数量为 nums[left]*nums[i]*nums[right]的硬币. left和right代表气球i相邻的气球编号, 气球i戳破之后, left和right便是相邻的了. 找出你可以获得的最大硬币数量.
 Naiv">
 <meta property="og:image" content="http://7xrhtv.com1.z0.glb.clouddn.com/matrixmul.png">
 <meta property="og:image" content="http://7xrhtv.com1.z0.glb.clouddn.com/matix_example.png">
-<meta property="og:updated_time" content="2016-03-04T12:04:43.970Z">
+<meta property="og:updated_time" content="2016-03-04T13:27:41.019Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Leetcode 312.Burst Balloons">
 <meta name="twitter:description" content="Leetcode 312.Burst Balloons312.Burst Balloons的题目大意为：
@@ -92,7 +92,7 @@ Naiv">
   };
 </script>
 
-  <title> Leetcode 312.Burst Balloons | Youngyf </title>
+  <title> Leetcode 312.Burst Balloons | YOUNG's BLOG </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -100,6 +100,16 @@ Naiv">
   
 
 
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?c7b404f457bee378d42956fa10a34749";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -121,11 +131,11 @@ Naiv">
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Youngyf</span>
+      <span class="site-title">YOUNG's BLOG</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle"></p>
+  <p class="site-subtitle">Blog for myself</p>
 </div>
 
 <div class="site-nav-toggle">
@@ -189,16 +199,6 @@ Naiv">
               <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
             
             标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-commonweal">
-          <a href="/404.html" rel="section">
-            
-              <i class="menu-item-icon fa fa-heartbeat fa-fw"></i> <br />
-            
-            公益404
           </a>
         </li>
       
@@ -284,6 +284,13 @@ Naiv">
 
           
             
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/03/leetcode-312-Burst-Balloons/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/03/leetcode-312-Burst-Balloons/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -314,7 +321,7 @@ Naiv">
 <h2 id="u6B64_u9898_u601D_u8DEF"><a href="#u6B64_u9898_u601D_u8DEF" class="headerlink" title="此题思路"></a>此题思路</h2><p>如果用dp[i, j]表示戳破气球i~j可以获得的最大数目, 我们可以用最后戳破的气球k将[i, j]分成两部分:[i, k-1], [k+1, j]. 于是我们有了状态转移方程:</p>
 <p><font color="red">dp[i, j] = min{ dp[i, k - 1] + dp[k + 1, j] + nums[i - 1] * nums[k] * nums[j + 1]}</font><br>此外, 还需要注意k在i, j两个边界处的情况。</p>
 <h2 id="C++_u4EE3_u7801"><a href="#C++_u4EE3_u7801" class="headerlink" title="C++代码"></a>C++代码</h2><p>github链接: <a href="https://github.com/youngyf/leetcode/blob/master/solution/312.%20Burst%20Balloons/Burst_Balloons.cpp" target="_blank" rel="external">点这里</a></p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int maxCoins(vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line">        int n = nums.size();</span><br><span class="line"></span><br><span class="line">        // n == 0</span><br><span class="line">        if(n == 0)</span><br><span class="line">            return 0;</span><br><span class="line"></span><br><span class="line">        // 前后各插入一个1</span><br><span class="line">        nums.insert(nums.begin(), 1);</span><br><span class="line">        nums.push_back(1);</span><br><span class="line"></span><br><span class="line">        // 二维数组</span><br><span class="line">        int* dp = new int[n * n];</span><br><span class="line">        memset(dp, 0, n * n * sizeof(int));</span><br><span class="line"></span><br><span class="line">        // assign dp[i, i]</span><br><span class="line">        for(int i = 0;i &lt; n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            // dp[i, i] = nums[i-1 + 1] * nums[i + 1] * nums[i+1 + 1]</span><br><span class="line">            dp[i * n + i] = nums[i] * nums[i + 1] * nums[i + 2];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // dp</span><br><span class="line">        for(int j = 0;j &lt; n;j++) // j: 0 -&gt; n-1</span><br><span class="line">        &#123;</span><br><span class="line">            for(int i = j - 1;i &gt;= 0; i--)  // i: j-1 -&gt; 0</span><br><span class="line">            &#123;</span><br><span class="line">                for(int k = i;k &lt;= j;k++)  //k: i -&gt; j</span><br><span class="line">                &#123;</span><br><span class="line">                    // nums[i-1 + 1] * nums[k + 1] * nums[j+1 + 1]</span><br><span class="line">                    int sum = nums[i] * nums[k + 1] * nums[j + 2];;</span><br><span class="line">                    // dp[i, j] = max(dp[i, k-1] + dp[k+1, j] + nums[i-1] * nums[j+1] + k)</span><br><span class="line">                    if(k &gt; i)</span><br><span class="line">                        sum += dp[i * n + k - 1];</span><br><span class="line">                    if(k &lt; j)</span><br><span class="line">                        sum += dp[(k + 1) * n + j];</span><br><span class="line"></span><br><span class="line">                    dp[i * n + j] = max(dp[i * n + j], sum);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return dp[0 * n + n-1];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxCoins</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = nums.size();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// n == 0</span></span><br><span class="line">        <span class="keyword">if</span>(n == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 前后各插入一个1</span></span><br><span class="line">        nums.insert(nums.begin(), <span class="number">1</span>);</span><br><span class="line">        nums.push_back(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 二维数组</span></span><br><span class="line">        <span class="keyword">int</span> dp[n * n] = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// assign dp[i, i]</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// dp[i, i] = nums[i-1 + 1] * nums[i + 1] * nums[i+1 + 1]</span></span><br><span class="line">            dp[i * n + i] = nums[i] * nums[i + <span class="number">1</span>] * nums[i + <span class="number">2</span>];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// dp</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; n;j++) <span class="comment">// j: 0 -&gt; n-1</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = j - <span class="number">1</span>;i &gt;= <span class="number">0</span>; i--)  <span class="comment">// i: j-1 -&gt; 0</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> k = i;k &lt;= j;k++)  <span class="comment">//k: i -&gt; j</span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">// nums[i-1 + 1] * nums[k + 1] * nums[j+1 + 1]</span></span><br><span class="line">                    <span class="keyword">int</span> sum = nums[i] * nums[k + <span class="number">1</span>] * nums[j + <span class="number">2</span>];;</span><br><span class="line">                    <span class="comment">// dp[i, j] = max(dp[i, k-1] + dp[k+1, j] + nums[i-1] * nums[j+1] + k)</span></span><br><span class="line">                    <span class="keyword">if</span>(k &gt; i)</span><br><span class="line">                        sum += dp[i * n + k - <span class="number">1</span>];</span><br><span class="line">                    <span class="keyword">if</span>(k &lt; j)</span><br><span class="line">                        sum += dp[(k + <span class="number">1</span>) * n + j];</span><br><span class="line"></span><br><span class="line">                    dp[i * n + j] = max(dp[i * n + j], sum);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> dp[<span class="number">0</span> * n + n-<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -358,6 +365,10 @@ Naiv">
           
   <div class="comments" id="comments">
     
+      <div class="ds-thread" data-thread-key="2016/03/03/leetcode-312-Burst-Balloons/"
+           data-title="Leetcode 312.Burst Balloons" data-url="http://yoursite.com/2016/03/03/leetcode-312-Burst-Balloons/">
+      </div>
+    
   </div>
 
 
@@ -392,10 +403,10 @@ Naiv">
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/default_avatar.jpg"
+               src="http://7xrhtv.com1.z0.glb.clouddn.com/%E5%A4%B4%E5%83%8Fsmall.jpg"
                alt="youngyf" />
           <p class="site-author-name" itemprop="name">youngyf</p>
-          <p class="site-description motion-element" itemprop="description">一枚什么都不会的程序猿</p>
+          <p class="site-description motion-element" itemprop="description">一枚什么都不会的程序狗</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
@@ -735,9 +746,28 @@ Naiv">
 
   
 
+  
+    
+  
 
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"youngyf"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
 
   
+    
+  
+
+
 
 
 
