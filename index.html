@@ -1,215 +1,583 @@
+<!doctype html>
 
- <!DOCTYPE HTML>
-<html lang="zh-CN">
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
 <head>
-  <meta charset="UTF-8">
-  
-    <title>Youngyf</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
-    
-    <meta name="author" content="youngyf">
-    
-    
-    
-    
-    
-    <link rel="icon" href="/img/favicon.ico">
-    
-    
-    <link rel="apple-touch-icon" href="/img/pacman.jpg">
-    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
-    
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
-</head>
-
-  <body>
-    <header>
-      <div>
-		
-			<div id="imglogo">
-				<a href="/"><img src="/img/logo.svg" alt="Youngyf" title="Youngyf"/></a>
-			</div>
-			
-			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="Youngyf">Youngyf</a></h1>
-				<h2 class="blog-motto"></h2>
-			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
-			</a></div>
-			<nav class="animated">
-				<ul>
-					
-						<li><a href="/">Home</a></li>
-					
-						<li><a href="/archives">Archives</a></li>
-					
-					<li>
-					
-					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
-						<label>Search</label>
-						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
-						<input type="hidden" name="q" value="site:yoursite.com">
-					</form>
-					
-					</li>
-				</ul>
-			</nav>			
-</div>
-
-    </header>
-    <div id="container">
-      <div id="main">
-
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2016/03/04/leetcode-312-Burst-Balloons/" title="" itemprop="url">
-  
-    <h1 itemprop="name"></h1>
-    
-     
-           <p itemprop="description" >&lt;!DOCTYPE html&gt;body {
-  width: 45em;
-  border: 1px solid #ddd;
-  outline: 1300px solid #fff;
-  margin: 16px auto;
-}
-
-body .markdown-body
-{
- </p>
-        
-    
-    <time datetime="2016-03-04T08:24:26.268Z" itemprop="datePublished">2016-03-04</time>
-  </a>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2016/03/03/leetcode-312-Burst-Balloons/" title="Leetcode 312.Burst Balloons" itemprop="url">
-  
-    <h1 itemprop="name">Leetcode 312.Burst Balloons</h1>
-    
-     
-           <p itemprop="description" >Leetcode 312.Burst Balloons312.Burst Balloons的题目大意为：
-有n个气球, 顺序编号为0~n-1. 如果戳破编号为i的气球, 你可以获得数量为 nums[left]*nums[i]*nums[right]的硬币. left和right代</p>
-        
-    
-    <time datetime="2016-03-03T14:54:30.000Z" itemprop="datePublished">2016-03-03</time>
-  </a>
-</section>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 
-</div>
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
-<div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
-<aside class="clearfix">
-
-  
-<div class="categorieslist">
-	<p class="asidetitle">分类</p>
-		<ul>
-		
-			<li><a href="/categories/Leetcode/" title="Leetcode">Leetcode<sup>1</sup></a></li>
-		
-		</ul>
-</div>
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
 
 
-  
-<div class="tagslist">
-	<p class="asidetitle">标签</p>
-		<ul class="clearfix">
-		
-			<li><a href="/tags/Leetcode/" title="Leetcode">Leetcode<sup>1</sup></a></li>
-		
-			<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
-		
-		</ul>
-</div>
 
 
-  <div class="rsspart">
-	<a href="null" target="_blank" title="rss">RSS 订阅</a>
-</div>
 
-</aside>
-</div>
-    </div>
-    <footer><div id="footer" >
-	
-	<div class="line">
-		<span></span>
-		<div class="author"></div>
-	</div>
-	
-	
-	<div class="social-font clearfix">
-		
-		
-		
-		
-		
-	</div>
-		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2016 
-		
-		<a href="http://yoursite.com" target="_blank" title="youngyf">youngyf</a>
-		
-		</p>
-</div>
-</footer>
-    <script src="/js/jquery-2.1.0.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.navbar').click(function(){
-    $('header nav').toggleClass('shownav');
-  });
-  var myWidth = 0;
-  function getSize(){
-    if( typeof( window.innerWidth ) == 'number' ) {
-      myWidth = window.innerWidth;
-    } else if( document.documentElement && document.documentElement.clientWidth) {
-      myWidth = document.documentElement.clientWidth;
-    };
-  };
-  var m = $('#main'),
-      a = $('#asidepart'),
-      c = $('.closeaside'),
-      o = $('.openaside');
-  $(window).resize(function(){
-    getSize(); 
-    if (myWidth >= 1024) {
-      $('header nav').removeClass('shownav');
-    }else
-    {
-      m.removeClass('moveMain');
-      a.css('display', 'block').removeClass('fadeOut');
-      o.css('display', 'none');
-        
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="一枚什么都不会的程序猿">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Youngyf">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Youngyf">
+<meta property="og:description" content="一枚什么都不会的程序猿">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Youngyf">
+<meta name="twitter:description" content="一枚什么都不会的程序猿">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
     }
-  });
-  c.click(function(){
-    a.addClass('fadeOut').css('display', 'none');
-    o.css('display', 'block').addClass('fadeIn');
-    m.addClass('moveMain');
-  });
-  o.click(function(){
-    o.css('display', 'none').removeClass('beforeFadeIn');
-    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
-    m.removeClass('moveMain');
-  });
-  $(window).scroll(function(){
-    o.css("top",Math.max(80,260-$(this).scrollTop()));
-  });
-});
+  };
 </script>
 
+  <title> Youngyf </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
 
 
 
 
 
 
-  </body>
- </html>
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Youngyf</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-heartbeat fa-fw"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+
+    
+
+    
+    
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/03/leetcode-312-Burst-Balloons/" itemprop="url">
+                  Leetcode 312.Burst Balloons
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-03T22:54:30+08:00" content="2016-03-03">
+              2016-03-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">Leetcode</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Leetcode_312-Burst_Balloons"><a href="#Leetcode_312-Burst_Balloons" class="headerlink" title="Leetcode 312.Burst Balloons"></a>Leetcode 312.Burst Balloons</h1><p><a href="https://leetcode.com/problems/burst-balloons/" target="_blank" rel="external">312.Burst Balloons</a>的题目大意为：</p>
+<p>有n个气球, 顺序编号为0~n-1. 如果戳破编号为i的气球, 你可以获得数量为<font color="red"> nums[left]*nums[i]*nums[right]</font>的硬币. left和right代表气球i相邻的气球编号, 气球i戳破之后, left和right便是相邻的了. 找出你可以获得的最大硬币数量.</p>
+<h2 id="Naive_u7684_u60F3_u6CD5"><a href="#Naive_u7684_u60F3_u6CD5" class="headerlink" title="Naive的想法"></a>Naive的想法</h2><p>首先我想, 如何保存状态?<br>假设4个气球数值为[3, 1, 5, 8]. 如果戳破3, 变为[1, 5, 8]. 如果戳破1, 变为[3, 5, 8]. 起初想用一位数(0或1)来表示气球是否被戳破. [3, 1, 5, 8]状态表示为(1, 1, 1, 1);[1, 5, 8]状态表示为(0, 1, 1, 1).[3, 5, 8]状态表示为(1, 0, 1, 1). 这样可以由状态(1, 1, 1, 1)转移到状态(0, 1, 1, 1)或(1, 0, 1, 1).<br>但是500个气球岂不是要大小为2^500的数来表示？遍历完每个状态的时间复杂度为O(2^n). 这样显然有问题.</p>
+<h2 id="u8054_u60F3_u5230_u77E9_u9635_u94FE_u4E58_u6CD5_u95EE_u9898"><a href="#u8054_u60F3_u5230_u77E9_u9635_u94FE_u4E58_u6CD5_u95EE_u9898" class="headerlink" title="联想到矩阵链乘法问题"></a>联想到矩阵链乘法问题</h2><p>以前见到过一道DP问题——矩阵链乘法和此题很像。<br><img src="http://7xrhtv.com1.z0.glb.clouddn.com/matrixmul.png =80x" alt="MatrixM"></p>
+<p>n个矩阵相乘, 因为不同的计算顺序会导致乘法计算次数不同。例如下图所示, 先计算A1*A2和先计算A2*A3的结果不同.<br><img src="http://7xrhtv.com1.z0.glb.clouddn.com/matix_example.png =50x" alt="Mexample"><br>那么如何选择计算顺序使得计算量最小?</p>
+<p>用dp[i, j]表示Ai*A(i+1)* …*Aj的最优值, 有状态转移方程:</p>
+<font color="red">dp[i, j] = min{dp[i, k] + dp[k + 1, j] + p[i - 1] * p[k] * p[j]}</font>
+
+<h2 id="u6B64_u9898_u601D_u8DEF"><a href="#u6B64_u9898_u601D_u8DEF" class="headerlink" title="此题思路"></a>此题思路</h2><p>如果用dp[i, j]表示戳破气球i~j可以获得的最大数目, 我们可以用最后戳破的气球k将[i, j]分成两部分:[i, k-1], [k+1, j]. 于是我们有了状态转移方程:</p>
+<p><font color="red">dp[i, j] = min{ dp[i, k - 1] + dp[k + 1, j] + nums[i - 1] * nums[k] * nums[j + 1]}</font><br>此外, 还需要注意k在i, j两个边界处的情况。</p>
+<h2 id="C++_u4EE3_u7801"><a href="#C++_u4EE3_u7801" class="headerlink" title="C++代码"></a>C++代码</h2><p>github链接: <a href="https://github.com/youngyf/leetcode/blob/master/solution/312.%20Burst%20Balloons/Burst_Balloons.cpp" target="_blank" rel="external">点这里</a></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int maxCoins(vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line">        int n = nums.size();</span><br><span class="line"></span><br><span class="line">        // n == 0</span><br><span class="line">        if(n == 0)</span><br><span class="line">            return 0;</span><br><span class="line"></span><br><span class="line">        // 前后各插入一个1</span><br><span class="line">        nums.insert(nums.begin(), 1);</span><br><span class="line">        nums.push_back(1);</span><br><span class="line"></span><br><span class="line">        // 二维数组</span><br><span class="line">        int* dp = new int[n * n];</span><br><span class="line">        memset(dp, 0, n * n * sizeof(int));</span><br><span class="line"></span><br><span class="line">        // assign dp[i, i]</span><br><span class="line">        for(int i = 0;i &lt; n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            // dp[i, i] = nums[i-1 + 1] * nums[i + 1] * nums[i+1 + 1]</span><br><span class="line">            dp[i * n + i] = nums[i] * nums[i + 1] * nums[i + 2];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // dp</span><br><span class="line">        for(int j = 0;j &lt; n;j++) // j: 0 -&gt; n-1</span><br><span class="line">        &#123;</span><br><span class="line">            for(int i = j - 1;i &gt;= 0; i--)  // i: j-1 -&gt; 0</span><br><span class="line">            &#123;</span><br><span class="line">                for(int k = i;k &lt;= j;k++)  //k: i -&gt; j</span><br><span class="line">                &#123;</span><br><span class="line">                    // nums[i-1 + 1] * nums[k + 1] * nums[j+1 + 1]</span><br><span class="line">                    int sum = nums[i] * nums[k + 1] * nums[j + 2];;</span><br><span class="line">                    // dp[i, j] = max(dp[i, k-1] + dp[k+1, j] + nums[i-1] * nums[j+1] + k)</span><br><span class="line">                    if(k &gt; i)</span><br><span class="line">                        sum += dp[i * n + k - 1];</span><br><span class="line">                    if(k &lt; j)</span><br><span class="line">                        sum += dp[(k + 1) * n + j];</span><br><span class="line"></span><br><span class="line">                    dp[i * n + j] = max(dp[i * n + j], sum);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return dp[0 * n + n-1];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/default_avatar.jpg"
+               alt="youngyf" />
+          <p class="site-author-name" itemprop="name">youngyf</p>
+          <p class="site-description motion-element" itemprop="description">一枚什么都不会的程序猿</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+          
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/youngyf" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> github
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/youngyf1024" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> weibo
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/youngyf" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> zhihu
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">youngyf</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  
+
+
+  
+
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=0.5.0"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+
+  
+    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/MathJax.js"></script>
+    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/config/TeX-AMS-MML_HTMLorMML.js"></script>
+  
+
+
+  
+  
+
+
+</body>
+</html>
