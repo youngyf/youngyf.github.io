@@ -1500,20 +1500,13 @@ public:
 
       
         
-          
-            <p><a href="https://leetcode.com/problems/missing-number/" target="_blank" rel="external">268.Missing Number</a>的题目大意为:<br>给出一个数组，包含n个数(取自0~n之间)，让你找出缺少了哪个数. </p>
-<p>通过数组的大小可以知道n为多大，有两种方法来解这道题。</p>
-<h1 id="1-_u6C42_u548C_u6CD5"><a href="#1-_u6C42_u548C_u6CD5" class="headerlink" title="1.求和法"></a>1.求和法</h1><p>0, 1, 2, …, n这n+1个数的和我们可以求出, 减去给出的n个数之和, 差值就是缺少的那个数.<br><strong>需要注意注意一点, 直接求和如果数值过大可能会overflow, 所以要边加边减.</strong></p>
-<p>C++代码: <a href="https://github.com/youngyf/leetcode/blob/master/solution/268_Missing_Number/Missing_Number.cpp" target="_blank" rel="external">github</a><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">missingNumber</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ret = nums.size();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; nums.size();i++)</span><br><span class="line">        &#123;</span><br><span class="line">            ret -= nums[i];</span><br><span class="line">            ret += i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<h1 id="2-_u4F4D_u64CD_u4F5C"><a href="#2-_u4F4D_u64CD_u4F5C" class="headerlink" title="2.位操作"></a>2.位操作</h1><p>我们已经知道了0~n这n+1个数, 又知道了给出的n个数. 所以缺失的数只出现了一次, 其他数字出现了两次.</p>
-<p>xor 运算有以下的性质:</p>
-<blockquote>
-<p>x^x = 0<br>0^x = x</p>
-</blockquote>
-<p>所以, 将所有的数做异或运算, 运算的结果即为缺失的数.</p>
-<p>C++代码: <a href="https://github.com/youngyf/leetcode/blob/master/solution/268_Missing_Number/Missing_Number.cpp" target="_blank" rel="external">github</a><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">missingNumber</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ret = nums.size();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; nums.size();i++)</span><br><span class="line">        &#123;</span><br><span class="line">            ret ^= nums[i];</span><br><span class="line">            ret ^= i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-
-          
+          <p><a href="https://leetcode.com/problems/missing-number/">268.Missing Number</a>的题目大意为:<br>给出一个数组，包含n个数(取自0~n之间)，让你找出缺少了哪个数. </p>
+<p>通过数组的大小可以知道n为多大，有两种方法来解这道题。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/06/leetcode-268-Missing-Number/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
