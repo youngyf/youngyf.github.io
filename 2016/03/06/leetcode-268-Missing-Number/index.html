@@ -57,24 +57,25 @@
 
 
 
-<meta name="description" content="312.Burst Balloons的题目大意为：
-有n个气球, 顺序编号为0~n-1. 如果戳破编号为i的气球, 你可以获得数量为 nums[left]*nums[i]*nums[right]的硬币. left和right代表气球i相邻的气球编号, 气球i戳破之后, left和right便是相邻的了. 找出你可以获得的最大硬币数量.
-Naive的想法首先我想, 如何保存状态?假设4个气球数值为[">
+<meta name="description" content="268.Missing Number的题目大意为:给出一个数组，包含n个数(取自0~n之间)，让你找出缺少了哪个数. 
+通过数组的大小可以知道n为多大，有两种方法来解这道题。
+1.求和法0, 1, 2, …, n这n+1个数的和我们可以求出, 减去给出的n个数之和, 差值就是缺少的那个数.需要注意注意一点, 直接求和如果数值过大可能会overflow, 所以要边加边减.
+C++代码: github">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Leetcode 312.Burst Balloons">
-<meta property="og:url" content="http://yoursite.com/2016/03/03/leetcode-312-Burst-Balloons/index.html">
+<meta property="og:title" content="leetcode 268.Missing Number">
+<meta property="og:url" content="http://yoursite.com/2016/03/06/leetcode-268-Missing-Number/index.html">
 <meta property="og:site_name" content="YOUNG's BLOG">
-<meta property="og:description" content="312.Burst Balloons的题目大意为：
-有n个气球, 顺序编号为0~n-1. 如果戳破编号为i的气球, 你可以获得数量为 nums[left]*nums[i]*nums[right]的硬币. left和right代表气球i相邻的气球编号, 气球i戳破之后, left和right便是相邻的了. 找出你可以获得的最大硬币数量.
-Naive的想法首先我想, 如何保存状态?假设4个气球数值为[">
-<meta property="og:image" content="http://7xrhtv.com1.z0.glb.clouddn.com/matrixmul.png">
-<meta property="og:image" content="http://7xrhtv.com1.z0.glb.clouddn.com/matix_example.png">
-<meta property="og:updated_time" content="2016-03-06T05:45:09.772Z">
+<meta property="og:description" content="268.Missing Number的题目大意为:给出一个数组，包含n个数(取自0~n之间)，让你找出缺少了哪个数. 
+通过数组的大小可以知道n为多大，有两种方法来解这道题。
+1.求和法0, 1, 2, …, n这n+1个数的和我们可以求出, 减去给出的n个数之和, 差值就是缺少的那个数.需要注意注意一点, 直接求和如果数值过大可能会overflow, 所以要边加边减.
+C++代码: github">
+<meta property="og:updated_time" content="2016-03-06T06:01:19.501Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Leetcode 312.Burst Balloons">
-<meta name="twitter:description" content="312.Burst Balloons的题目大意为：
-有n个气球, 顺序编号为0~n-1. 如果戳破编号为i的气球, 你可以获得数量为 nums[left]*nums[i]*nums[right]的硬币. left和right代表气球i相邻的气球编号, 气球i戳破之后, left和right便是相邻的了. 找出你可以获得的最大硬币数量.
-Naive的想法首先我想, 如何保存状态?假设4个气球数值为[">
+<meta name="twitter:title" content="leetcode 268.Missing Number">
+<meta name="twitter:description" content="268.Missing Number的题目大意为:给出一个数组，包含n个数(取自0~n之间)，让你找出缺少了哪个数. 
+通过数组的大小可以知道n为多大，有两种方法来解这道题。
+1.求和法0, 1, 2, …, n这n+1个数的和我们可以求出, 减去给出的n个数之和, 差值就是缺少的那个数.需要注意注意一点, 直接求和如果数值过大可能会overflow, 所以要边加边减.
+C++代码: github">
 
 
 
@@ -92,7 +93,7 @@ Naive的想法首先我想, 如何保存状态?假设4个气球数值为[">
   };
 </script>
 
-  <title> Leetcode 312.Burst Balloons | YOUNG's BLOG </title>
+  <title> leetcode 268.Missing Number | YOUNG's BLOG </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -274,7 +275,7 @@ Naive的想法首先我想, 如何保存状态?假设4个气球数值为[">
             
             
               
-                Leetcode 312.Burst Balloons
+                leetcode 268.Missing Number
               
             
           </h1>
@@ -286,8 +287,8 @@ Naive的想法首先我想, 如何保存状态?假设4个气球数值为[">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-03T22:54:30+08:00" content="2016-03-03">
-              2016-03-03
+            <time itemprop="dateCreated" datetime="2016-03-06T13:33:49+08:00" content="2016-03-06">
+              2016-03-06
             </time>
           </span>
 
@@ -316,8 +317,8 @@ Naive的想法首先我想, 如何保存状态?假设4个气球数值为[">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/03/leetcode-312-Burst-Balloons/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/03/leetcode-312-Burst-Balloons/" itemprop="commentsCount"></span>
+                <a href="/2016/03/06/leetcode-268-Missing-Number/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/06/leetcode-268-Missing-Number/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -339,20 +340,17 @@ Naive的想法首先我想, 如何保存状态?假设4个气球数值为[">
       
 
       
-        <p><a href="https://leetcode.com/problems/burst-balloons/" target="_blank" rel="external">312.Burst Balloons</a>的题目大意为：</p>
-<p>有n个气球, 顺序编号为0~n-1. 如果戳破编号为i的气球, 你可以获得数量为<font color="red"> nums[left]*nums[i]*nums[right]</font>的硬币. left和right代表气球i相邻的气球编号, 气球i戳破之后, left和right便是相邻的了. 找出你可以获得的最大硬币数量.</p>
-<h2 id="Naive_u7684_u60F3_u6CD5"><a href="#Naive_u7684_u60F3_u6CD5" class="headerlink" title="Naive的想法"></a>Naive的想法</h2><p>首先我想, 如何保存状态?<br>假设4个气球数值为[3, 1, 5, 8]. 如果戳破3, 变为[1, 5, 8]. 如果戳破1, 变为[3, 5, 8]. 起初想用一位数(0或1)来表示气球是否被戳破. [3, 1, 5, 8]状态表示为(1, 1, 1, 1);[1, 5, 8]状态表示为(0, 1, 1, 1).[3, 5, 8]状态表示为(1, 0, 1, 1). 这样可以由状态(1, 1, 1, 1)转移到状态(0, 1, 1, 1)或(1, 0, 1, 1).<br>但是500个气球岂不是要大小为2^500的数来表示？遍历完每个状态的时间复杂度为O(2^n). 这样显然有问题.</p>
-<a id="more"></a>
-<h2 id="u8054_u60F3_u5230_u77E9_u9635_u94FE_u4E58_u6CD5_u95EE_u9898"><a href="#u8054_u60F3_u5230_u77E9_u9635_u94FE_u4E58_u6CD5_u95EE_u9898" class="headerlink" title="联想到矩阵链乘法问题"></a>联想到矩阵链乘法问题</h2><p>以前见到过一道DP问题——矩阵链乘法和此题很像。<br><img src="http://7xrhtv.com1.z0.glb.clouddn.com/matrixmul.png" alt="MatrixM"></p>
-<p>n个矩阵相乘, 因为不同的计算顺序会导致乘法计算次数不同。例如下图所示, 先计算A1*A2和先计算A2*A3的结果不同.<br><img src="http://7xrhtv.com1.z0.glb.clouddn.com/matix_example.png" alt="Mexample"></p>
-<p>那么如何选择计算顺序使得计算量最小?</p>
-<p>用dp[i, j]表示Ai*A(i+1)* …*Aj的最优值, 有状态转移方程:</p>
-<font color="red">dp[i, j] = min{dp[i, k] + dp[k + 1, j] + p[i - 1] * p[k] * p[j]}</font>
-
-<h2 id="u6B64_u9898_u601D_u8DEF"><a href="#u6B64_u9898_u601D_u8DEF" class="headerlink" title="此题思路"></a>此题思路</h2><p>如果用dp[i, j]表示戳破气球i~j可以获得的最大数目, 我们可以用最后戳破的气球k将[i, j]分成两部分:[i, k-1], [k+1, j]. 于是我们有了状态转移方程:</p>
-<p><font color="red">dp[i, j] = min{ dp[i, k - 1] + dp[k + 1, j] + nums[i - 1] * nums[k] * nums[j + 1]}</font><br>此外, 还需要注意k在i, j两个边界处的情况。</p>
-<h2 id="C++_u4EE3_u7801"><a href="#C++_u4EE3_u7801" class="headerlink" title="C++代码"></a>C++代码</h2><p>github链接: <a href="https://github.com/youngyf/leetcode/blob/master/solution/312_Burst_Balloons/Burst_Balloons.cpp" target="_blank" rel="external">点这里</a></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxCoins</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = nums.size();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// n == 0</span></span><br><span class="line">        <span class="keyword">if</span>(n == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 前后各插入一个1</span></span><br><span class="line">        nums.insert(nums.begin(), <span class="number">1</span>);</span><br><span class="line">        nums.push_back(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 二维数组</span></span><br><span class="line">        <span class="keyword">int</span> dp[n * n] = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// assign dp[i, i]</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// dp[i, i] = nums[i-1 + 1] * nums[i + 1] * nums[i+1 + 1]</span></span><br><span class="line">            dp[i * n + i] = nums[i] * nums[i + <span class="number">1</span>] * nums[i + <span class="number">2</span>];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// dp</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; n;j++) <span class="comment">// j: 0 -&gt; n-1</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = j - <span class="number">1</span>;i &gt;= <span class="number">0</span>; i--)  <span class="comment">// i: j-1 -&gt; 0</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> k = i;k &lt;= j;k++)  <span class="comment">//k: i -&gt; j</span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">// nums[i-1 + 1] * nums[k + 1] * nums[j+1 + 1]</span></span><br><span class="line">                    <span class="keyword">int</span> sum = nums[i] * nums[k + <span class="number">1</span>] * nums[j + <span class="number">2</span>];;</span><br><span class="line">                    <span class="comment">// dp[i, j] = max(dp[i, k-1] + dp[k+1, j] + nums[i-1] * nums[j+1] + k)</span></span><br><span class="line">                    <span class="keyword">if</span>(k &gt; i)</span><br><span class="line">                        sum += dp[i * n + k - <span class="number">1</span>];</span><br><span class="line">                    <span class="keyword">if</span>(k &lt; j)</span><br><span class="line">                        sum += dp[(k + <span class="number">1</span>) * n + j];</span><br><span class="line"></span><br><span class="line">                    dp[i * n + j] = max(dp[i * n + j], sum);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> dp[<span class="number">0</span> * n + n-<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+        <p><a href="https://leetcode.com/problems/missing-number/" target="_blank" rel="external">268.Missing Number</a>的题目大意为:<br>给出一个数组，包含n个数(取自0~n之间)，让你找出缺少了哪个数. </p>
+<p>通过数组的大小可以知道n为多大，有两种方法来解这道题。</p>
+<h1 id="1-_u6C42_u548C_u6CD5"><a href="#1-_u6C42_u548C_u6CD5" class="headerlink" title="1.求和法"></a>1.求和法</h1><p>0, 1, 2, …, n这n+1个数的和我们可以求出, 减去给出的n个数之和, 差值就是缺少的那个数.<br><strong>需要注意注意一点, 直接求和如果数值过大可能会overflow, 所以要边加边减.</strong></p>
+<p>C++代码: <a href="https://github.com/youngyf/leetcode/blob/master/solution/268_Missing_Number/Missing_Number.cpp" target="_blank" rel="external">github</a><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">missingNumber</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ret = nums.size();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; nums.size();i++)</span><br><span class="line">        &#123;</span><br><span class="line">            ret -= nums[i];</span><br><span class="line">            ret += i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h1 id="2-_u4F4D_u64CD_u4F5C"><a href="#2-_u4F4D_u64CD_u4F5C" class="headerlink" title="2.位操作"></a>2.位操作</h1><p>我们已经知道了0~n这n+1个数, 又知道了给出的n个数. 所以缺失的数只出现了一次, 其他数字出现了两次.</p>
+<p>xor 运算有以下的性质:</p>
+<blockquote>
+<p>x^x = 0<br>0^x = x</p>
+</blockquote>
+<p>所以, 将所有的数做异或运算, 运算的结果即为缺失的数.</p>
+<p>C++代码: <a href="https://github.com/youngyf/leetcode/blob/master/solution/268_Missing_Number/Missing_Number.cpp" target="_blank" rel="external">github</a><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">missingNumber</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ret = nums.size();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; nums.size();i++)</span><br><span class="line">        &#123;</span><br><span class="line">            ret ^= nums[i];</span><br><span class="line">            ret ^= i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -378,12 +376,16 @@ Naive的想法首先我想, 如何保存状态?假设4个气球数值为[">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/03/03/leetcode-312-Burst-Balloons/" rel="next" title="Leetcode 312.Burst Balloons">
+                <i class="fa fa-chevron-left"></i> Leetcode 312.Burst Balloons
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/03/06/leetcode-268-Missing-Number/" rel="prev" title="leetcode 268.Missing Number">
-                leetcode 268.Missing Number <i class="fa fa-chevron-right"></i>
+              <a href="/2016/03/06/leetcode-268-Missing-Number/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -410,8 +412,8 @@ Naive的想法首先我想, 如何保存状态?假设4个气球数值为[">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/03/leetcode-312-Burst-Balloons/"
-           data-title="Leetcode 312.Burst Balloons" data-url="http://yoursite.com/2016/03/03/leetcode-312-Burst-Balloons/">
+      <div class="ds-thread" data-thread-key="2016/03/06/leetcode-268-Missing-Number/"
+           data-title="leetcode 268.Missing Number" data-url="http://yoursite.com/2016/03/06/leetcode-268-Missing-Number/">
       </div>
     
   </div>
@@ -532,7 +534,7 @@ Naive的想法首先我想, 如何保存状态?假设4个气球数值为[">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Naive_u7684_u60F3_u6CD5"><span class="nav-number">1.</span> <span class="nav-text">Naive的想法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u8054_u60F3_u5230_u77E9_u9635_u94FE_u4E58_u6CD5_u95EE_u9898"><span class="nav-number">2.</span> <span class="nav-text">联想到矩阵链乘法问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u6B64_u9898_u601D_u8DEF"><span class="nav-number">3.</span> <span class="nav-text">此题思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C++_u4EE3_u7801"><span class="nav-number">4.</span> <span class="nav-text">C++代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-_u6C42_u548C_u6CD5"><span class="nav-number">1.</span> <span class="nav-text">1.求和法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-_u4F4D_u64CD_u4F5C"><span class="nav-number">2.</span> <span class="nav-text">2.位操作</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
