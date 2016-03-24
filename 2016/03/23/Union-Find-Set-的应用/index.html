@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Leetcode,算法," />
+  <meta name="keywords" content="数据结构,算法," />
 
 
 
@@ -57,19 +57,16 @@
 
 
 
-<meta name="description" content="268.Missing Number的题目大意为:给出一个数组，包含n个数(取自0~n之间)，让你找出缺少了哪个数. 
-通过数组的大小可以知道n为多大，有两种方法来解这道题。">
+<meta name="description" content="有这么一个问题，有一个10万条记录的文件，每条记录有两列，分别是用户一次访问在两个服务器上留下的两条cookie记录，可以记作cookie A 和 cookie B。同一个用户的多次访问记录，cookie可能相同，也可能不同（cookie有时效性）。任意两条数据i,j ，如果cookie A相同或者cookie B相同，则认为i, j 是同一个用户留下的记录。同一个用户留下的访问记录可以合并，输出">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Leetcode 268.Missing Number">
-<meta property="og:url" content="http://yoursite.com/2016/03/06/leetcode-268-Missing-Number/index.html">
+<meta property="og:title" content="Union-Find Set 的应用">
+<meta property="og:url" content="http://yoursite.com/2016/03/23/Union-Find-Set-的应用/index.html">
 <meta property="og:site_name" content="YOUNG's BLOG">
-<meta property="og:description" content="268.Missing Number的题目大意为:给出一个数组，包含n个数(取自0~n之间)，让你找出缺少了哪个数. 
-通过数组的大小可以知道n为多大，有两种方法来解这道题。">
-<meta property="og:updated_time" content="2016-03-06T06:05:29.191Z">
+<meta property="og:description" content="有这么一个问题，有一个10万条记录的文件，每条记录有两列，分别是用户一次访问在两个服务器上留下的两条cookie记录，可以记作cookie A 和 cookie B。同一个用户的多次访问记录，cookie可能相同，也可能不同（cookie有时效性）。任意两条数据i,j ，如果cookie A相同或者cookie B相同，则认为i, j 是同一个用户留下的记录。同一个用户留下的访问记录可以合并，输出">
+<meta property="og:updated_time" content="2016-03-23T10:50:47.255Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Leetcode 268.Missing Number">
-<meta name="twitter:description" content="268.Missing Number的题目大意为:给出一个数组，包含n个数(取自0~n之间)，让你找出缺少了哪个数. 
-通过数组的大小可以知道n为多大，有两种方法来解这道题。">
+<meta name="twitter:title" content="Union-Find Set 的应用">
+<meta name="twitter:description" content="有这么一个问题，有一个10万条记录的文件，每条记录有两列，分别是用户一次访问在两个服务器上留下的两条cookie记录，可以记作cookie A 和 cookie B。同一个用户的多次访问记录，cookie可能相同，也可能不同（cookie有时效性）。任意两条数据i,j ，如果cookie A相同或者cookie B相同，则认为i, j 是同一个用户留下的记录。同一个用户留下的访问记录可以合并，输出">
 
 
 
@@ -87,7 +84,7 @@
   };
 </script>
 
-  <title> Leetcode 268.Missing Number | YOUNG's BLOG </title>
+  <title> Union-Find Set 的应用 | YOUNG's BLOG </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -269,7 +266,7 @@
             
             
               
-                Leetcode 268.Missing Number
+                Union-Find Set 的应用
               
             
           </h1>
@@ -281,8 +278,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-06T13:33:49+08:00" content="2016-03-06">
-              2016-03-06
+            <time itemprop="dateCreated" datetime="2016-03-23T11:07:36+08:00" content="2016-03-23">
+              2016-03-23
             </time>
           </span>
 
@@ -295,8 +292,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">Leetcode</span>
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
                   </a>
                 </span>
 
@@ -311,8 +308,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/06/leetcode-268-Missing-Number/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/06/leetcode-268-Missing-Number/" itemprop="commentsCount"></span>
+                <a href="/2016/03/23/Union-Find-Set-的应用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/23/Union-Find-Set-的应用/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -334,17 +331,28 @@
       
 
       
-        <p><a href="https://leetcode.com/problems/missing-number/" target="_blank" rel="external">268.Missing Number</a>的题目大意为:<br>给出一个数组，包含n个数(取自0~n之间)，让你找出缺少了哪个数. </p>
-<p>通过数组的大小可以知道n为多大，有两种方法来解这道题。<br><a id="more"></a></p>
-<h1 id="1-_u6C42_u548C_u6CD5"><a href="#1-_u6C42_u548C_u6CD5" class="headerlink" title="1.求和法"></a>1.求和法</h1><p>0, 1, 2, …, n这n+1个数的和我们可以求出, 减去给出的n个数之和, 差值就是缺少的那个数.<br><strong>需要注意注意一点, 直接求和如果数值过大可能会overflow, 所以要边加边减.</strong></p>
-<p>C++代码: <a href="https://github.com/youngyf/leetcode/blob/master/solution/268_Missing_Number/Missing_Number.cpp" target="_blank" rel="external">github</a><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">missingNumber</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ret = nums.size();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; nums.size();i++)</span><br><span class="line">        &#123;</span><br><span class="line">            ret -= nums[i];</span><br><span class="line">            ret += i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<h1 id="2-_u4F4D_u64CD_u4F5C"><a href="#2-_u4F4D_u64CD_u4F5C" class="headerlink" title="2.位操作"></a>2.位操作</h1><p>我们已经知道了0~n这n+1个数, 又知道了给出的n个数. 所以缺失的数只出现了一次, 其他数字出现了两次.</p>
-<p>xor 运算有以下的性质:</p>
+        <p>有这么一个问题，有一个10万条记录的文件，每条记录有两列，分别是用户一次访问在两个服务器上留下的两条cookie记录，可以记作cookie A 和 cookie B。同一个用户的多次访问记录，cookie可能相同，也可能不同（cookie有时效性）。任意两条数据i,j ，如果cookie A相同或者cookie B相同，则认为i, j 是同一个用户留下的记录。同一个用户留下的访问记录可以合并，输出每个用户的所有cookie。例如有文件记录如下(用小写字母表示cookie)：<br><a id="more"></a></p>
 <blockquote>
-<p>x^x = 0<br>0^x = x</p>
+<p>a, b<br>a, d<br>c, e<br>f, d<br>c, g</p>
 </blockquote>
-<p>所以, 将所有的数做异或运算, 运算的结果即为缺失的数.</p>
-<p>C++代码: <a href="https://github.com/youngyf/leetcode/blob/master/solution/268_Missing_Number/Missing_Number.cpp" target="_blank" rel="external">github</a><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">missingNumber</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ret = nums.size();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; nums.size();i++)</span><br><span class="line">        &#123;</span><br><span class="line">            ret ^= nums[i];</span><br><span class="line">            ret ^= i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>则输出为:</p>
+<blockquote>
+<p>{a, f}, {b, d}<br>{c}, {e, g}</p>
+</blockquote>
+<p>在面试的时候被问到这个问题，当时没有什么思路。回到宿舍，问了宿舍的冰神，冰神告诉我应该用并查集。我才恍然大悟，对于不相交集合的数据就应该用并查集，就是算法导论中的 disjoint-set data structure.</p>
+<h2 id="u5E76_u67E5_u96C6"><a href="#u5E76_u67E5_u96C6" class="headerlink" title="并查集"></a>并查集</h2><p><strong>对并查集介绍摘自<a href="http://www.cnblogs.com/cyjb/p/UnionFindSets.html" target="_blank" rel="external">CYJB博客</a>。</strong></p>
+<p>并查集(Union-find Set)是冰神心中完美的数据结构——简单却有非常大的威力。它主要用于处理一些<strong>不相交集合</strong>的合并问题。一些常见的用途有求连通子图、最小生成树Kruskal算法、求最近公共祖先(Least Common Ancestors, LCA)等。</p>
+<p>每个集合有一个代表元素，对于给定的元素，可以很快的找到这个元素所在集合的代表元素。<br>并查集有三个基本操作：</p>
+<p>1.makeSet(s): 建立一个新的并查集.</p>
+<p>2.unionSet(x, y): 把元素x和元素y所在的集合合并。</p>
+<p>3.find(x): 找到元素x所在集合的代表，该操作也可以用于判断两个元素是否在同一个集合。</p>
+<h2 id="u8BE5_u95EE_u9898_u7684_u89E3_u6CD5"><a href="#u8BE5_u95EE_u9898_u7684_u89E3_u6CD5" class="headerlink" title="该问题的解法"></a>该问题的解法</h2><p>1.如果有n条记录，给每条记录一个编号0~n-1.</p>
+<p>2.分别按照cookie A 和 cookie B排序，分别遍历两个排序后的结果，如果一条记录和它前一个记录cookie相同，合并之。</p>
+<p>3.并查集就像一个森林，建立一个字典，key是森林中每个树的根编号（即是每个用户），value是该用户对应的所有cookie。扫描一次整个文件就可以完成Step 3.</p>
+<p>相当于对数据做两次排序，三次线性扫描，时间复杂度是O(n).</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">init_set</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="string">"""</span><br><span class="line">        初始化并查集, 每个元素一类，代表元素是其自身</span><br><span class="line">    """</span></span><br><span class="line">    father = [i <span class="keyword">for</span> i <span class="keyword">in</span> range(n)]</span><br><span class="line">    <span class="keyword">return</span> father</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">find_set</span><span class="params">(father, x)</span>:</span></span><br><span class="line">    <span class="string">"""</span><br><span class="line">        找出元素x的代表元素，并作路径压缩</span><br><span class="line">    """</span></span><br><span class="line">    <span class="keyword">if</span> father[x] != x:</span><br><span class="line">        father[x] = find_set(father, father[x])</span><br><span class="line">    <span class="keyword">return</span> father[x]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">union_set</span><span class="params">(father, x, y)</span>:</span></span><br><span class="line">    <span class="string">"""</span><br><span class="line">        x的代表元素挂到y代表元素上</span><br><span class="line">    """</span></span><br><span class="line">    father[find_set(father, x)] = father[find_set(father, y)]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">find_user_cookie</span><span class="params">(cookie)</span>:</span></span><br><span class="line">    <span class="string">"""</span><br><span class="line">        cookie是一个list, 其中每个元素是一个3维tuple，代表:编号, cookie A, cookie B </span><br><span class="line">        返回一个字典，key代表一个用户, value是该用户的所有cookie</span><br><span class="line">    """</span></span><br><span class="line">    <span class="comment"># n条记录</span></span><br><span class="line">    n = len(cookie)</span><br><span class="line">    father = init_set(n)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># sort cookie by cookie A</span></span><br><span class="line">    sort_A = sorted(cookie, key = <span class="keyword">lambda</span> c:c[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 上一个record</span></span><br><span class="line">    pre = (-<span class="number">1</span>, <span class="keyword">None</span>, <span class="keyword">None</span>)</span><br><span class="line">    <span class="keyword">for</span> record <span class="keyword">in</span> sort_A:</span><br><span class="line">        <span class="comment"># 如果cookie A相同，合并</span></span><br><span class="line">        <span class="keyword">if</span> record[<span class="number">1</span>] == pre[<span class="number">1</span>]:</span><br><span class="line">            union_set(father, record[<span class="number">0</span>], pre[<span class="number">0</span>])</span><br><span class="line">        pre = record</span><br><span class="line"></span><br><span class="line">    <span class="comment"># sort cookie by cookie B</span></span><br><span class="line">    sort_B = sorted(cookie, key = <span class="keyword">lambda</span> c:c[<span class="number">2</span>])</span><br><span class="line"></span><br><span class="line">    pre = (-<span class="number">1</span>, <span class="keyword">None</span>, <span class="keyword">None</span>)</span><br><span class="line">    <span class="keyword">for</span> record <span class="keyword">in</span> sort_B:</span><br><span class="line">        <span class="comment"># 如果cookie B相同，合并</span></span><br><span class="line">        <span class="keyword">if</span> record[<span class="number">2</span>] == pre[<span class="number">2</span>]:</span><br><span class="line">            union_set(father, record[<span class="number">0</span>], pre[<span class="number">0</span>])</span><br><span class="line">        pre = record</span><br><span class="line"></span><br><span class="line">    user_cookie = dict()</span><br><span class="line">    <span class="keyword">for</span> record <span class="keyword">in</span> cookie:</span><br><span class="line">        <span class="comment"># 代表元素</span></span><br><span class="line">        rep = find_set(father, record[<span class="number">0</span>])</span><br><span class="line">        <span class="comment"># 如果rep不是字典的key</span></span><br><span class="line">        <span class="keyword">if</span> rep <span class="keyword">not</span> <span class="keyword">in</span> user_cookie:</span><br><span class="line">            user_cookie[rep] = (set(), set())</span><br><span class="line"></span><br><span class="line">        user_cookie[rep][<span class="number">0</span>].add(record[<span class="number">1</span>])</span><br><span class="line">        user_cookie[rep][<span class="number">1</span>].add(record[<span class="number">2</span>])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> user_cookie</span><br></pre></td></tr></table></figure>
+<p>如果输入cookie就是上文举的例子:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    cookie = [</span><br><span class="line">        (<span class="number">0</span>, <span class="string">'a'</span>, <span class="string">'b'</span>),</span><br><span class="line">        (<span class="number">1</span>, <span class="string">'a'</span>, <span class="string">'d'</span>),</span><br><span class="line">        (<span class="number">2</span>, <span class="string">'c'</span>, <span class="string">'e'</span>),</span><br><span class="line">        (<span class="number">3</span>, <span class="string">'f'</span>, <span class="string">'d'</span>),</span><br><span class="line">        (<span class="number">4</span>, <span class="string">'c'</span>, <span class="string">'g'</span>),</span><br><span class="line">    ]</span><br><span class="line">    <span class="keyword">print</span> find_user_cookie(cookie)</span><br></pre></td></tr></table></figure></p>
+<p>则运行结果为:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;0: (set([&#39;a&#39;, &#39;f&#39;]), set([&#39;b&#39;, &#39;d&#39;])), 2: (set([&#39;c&#39;]), set([&#39;e&#39;, &#39;g&#39;]))&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -359,7 +367,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Leetcode/" rel="tag">#Leetcode</a>
+            <a href="/tags/数据结构/" rel="tag">#数据结构</a>
           
             <a href="/tags/算法/" rel="tag">#算法</a>
           
@@ -370,16 +378,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/03/leetcode-312-Burst-Balloons/" rel="next" title="Leetcode 312.Burst Balloons">
-                <i class="fa fa-chevron-left"></i> Leetcode 312.Burst Balloons
+              <a href="/2016/03/13/一个外部排序问题/" rel="next" title="一个外部排序问题">
+                <i class="fa fa-chevron-left"></i> 一个外部排序问题
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/03/06/Leetcode-Single-Number-I-II-III/" rel="prev" title="Leetcode Single Number I/II/III (136/137/260)">
-                Leetcode Single Number I/II/III (136/137/260) <i class="fa fa-chevron-right"></i>
+              <a href="/2016/03/24/Leetcode-324-Wiggle-Sort-II/" rel="prev" title="Leetcode 324 Wiggle Sort II">
+                Leetcode 324 Wiggle Sort II <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -406,8 +414,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/06/leetcode-268-Missing-Number/"
-           data-title="Leetcode 268.Missing Number" data-url="http://yoursite.com/2016/03/06/leetcode-268-Missing-Number/">
+      <div class="ds-thread" data-thread-key="2016/03/23/Union-Find-Set-的应用/"
+           data-title="Union-Find Set 的应用" data-url="http://yoursite.com/2016/03/23/Union-Find-Set-的应用/">
       </div>
     
   </div>
@@ -528,7 +536,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-_u6C42_u548C_u6CD5"><span class="nav-number">1.</span> <span class="nav-text">1.求和法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-_u4F4D_u64CD_u4F5C"><span class="nav-number">2.</span> <span class="nav-text">2.位操作</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u5E76_u67E5_u96C6"><span class="nav-number">1.</span> <span class="nav-text">并查集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u8BE5_u95EE_u9898_u7684_u89E3_u6CD5"><span class="nav-number">2.</span> <span class="nav-text">该问题的解法</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Leetcode,算法," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -57,19 +57,25 @@
 
 
 
-<meta name="description" content="268.Missing Number的题目大意为:给出一个数组，包含n个数(取自0~n之间)，让你找出缺少了哪个数. 
-通过数组的大小可以知道n为多大，有两种方法来解这道题。">
+<meta name="description" content="324. Wiggle Sort II的题目大意为：
+
+给你n个无序的数nums, 让你输出如下的顺序: nums[0] &amp;lt; nums[1] &amp;gt; nums[2] &amp;lt; nums[3]….
+并且希望算法是O(n)的时间复杂度，O(1)的额外空间复杂度。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Leetcode 268.Missing Number">
-<meta property="og:url" content="http://yoursite.com/2016/03/06/leetcode-268-Missing-Number/index.html">
+<meta property="og:title" content="Leetcode 324 Wiggle Sort II">
+<meta property="og:url" content="http://yoursite.com/2016/03/24/Leetcode-324-Wiggle-Sort-II/index.html">
 <meta property="og:site_name" content="YOUNG's BLOG">
-<meta property="og:description" content="268.Missing Number的题目大意为:给出一个数组，包含n个数(取自0~n之间)，让你找出缺少了哪个数. 
-通过数组的大小可以知道n为多大，有两种方法来解这道题。">
-<meta property="og:updated_time" content="2016-03-06T06:05:29.191Z">
+<meta property="og:description" content="324. Wiggle Sort II的题目大意为：
+
+给你n个无序的数nums, 让你输出如下的顺序: nums[0] &amp;lt; nums[1] &amp;gt; nums[2] &amp;lt; nums[3]….
+并且希望算法是O(n)的时间复杂度，O(1)的额外空间复杂度。">
+<meta property="og:updated_time" content="2016-03-24T03:17:53.118Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Leetcode 268.Missing Number">
-<meta name="twitter:description" content="268.Missing Number的题目大意为:给出一个数组，包含n个数(取自0~n之间)，让你找出缺少了哪个数. 
-通过数组的大小可以知道n为多大，有两种方法来解这道题。">
+<meta name="twitter:title" content="Leetcode 324 Wiggle Sort II">
+<meta name="twitter:description" content="324. Wiggle Sort II的题目大意为：
+
+给你n个无序的数nums, 让你输出如下的顺序: nums[0] &amp;lt; nums[1] &amp;gt; nums[2] &amp;lt; nums[3]….
+并且希望算法是O(n)的时间复杂度，O(1)的额外空间复杂度。">
 
 
 
@@ -87,7 +93,7 @@
   };
 </script>
 
-  <title> Leetcode 268.Missing Number | YOUNG's BLOG </title>
+  <title> Leetcode 324 Wiggle Sort II | YOUNG's BLOG </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -269,7 +275,7 @@
             
             
               
-                Leetcode 268.Missing Number
+                Leetcode 324 Wiggle Sort II
               
             
           </h1>
@@ -281,38 +287,19 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-06T13:33:49+08:00" content="2016-03-06">
-              2016-03-06
+            <time itemprop="dateCreated" datetime="2016-03-24T11:17:53+08:00" content="2016-03-24">
+              2016-03-24
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">Leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/06/leetcode-268-Missing-Number/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/06/leetcode-268-Missing-Number/" itemprop="commentsCount"></span>
+                <a href="/2016/03/24/Leetcode-324-Wiggle-Sort-II/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/24/Leetcode-324-Wiggle-Sort-II/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -334,17 +321,31 @@
       
 
       
-        <p><a href="https://leetcode.com/problems/missing-number/" target="_blank" rel="external">268.Missing Number</a>的题目大意为:<br>给出一个数组，包含n个数(取自0~n之间)，让你找出缺少了哪个数. </p>
-<p>通过数组的大小可以知道n为多大，有两种方法来解这道题。<br><a id="more"></a></p>
-<h1 id="1-_u6C42_u548C_u6CD5"><a href="#1-_u6C42_u548C_u6CD5" class="headerlink" title="1.求和法"></a>1.求和法</h1><p>0, 1, 2, …, n这n+1个数的和我们可以求出, 减去给出的n个数之和, 差值就是缺少的那个数.<br><strong>需要注意注意一点, 直接求和如果数值过大可能会overflow, 所以要边加边减.</strong></p>
-<p>C++代码: <a href="https://github.com/youngyf/leetcode/blob/master/solution/268_Missing_Number/Missing_Number.cpp" target="_blank" rel="external">github</a><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">missingNumber</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ret = nums.size();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; nums.size();i++)</span><br><span class="line">        &#123;</span><br><span class="line">            ret -= nums[i];</span><br><span class="line">            ret += i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<h1 id="2-_u4F4D_u64CD_u4F5C"><a href="#2-_u4F4D_u64CD_u4F5C" class="headerlink" title="2.位操作"></a>2.位操作</h1><p>我们已经知道了0~n这n+1个数, 又知道了给出的n个数. 所以缺失的数只出现了一次, 其他数字出现了两次.</p>
-<p>xor 运算有以下的性质:</p>
+        <p><a href="https://leetcode.com/problems/wiggle-sort-ii/" target="_blank" rel="external">324. Wiggle Sort II</a>的题目大意为：</p>
 <blockquote>
-<p>x^x = 0<br>0^x = x</p>
+<p>给你n个无序的数nums, 让你输出如下的顺序: nums[0] &lt; nums[1] &gt; nums[2] &lt; nums[3]….</p>
+<p>并且希望算法是O(n)的时间复杂度，O(1)的额外空间复杂度。</p>
 </blockquote>
-<p>所以, 将所有的数做异或运算, 运算的结果即为缺失的数.</p>
-<p>C++代码: <a href="https://github.com/youngyf/leetcode/blob/master/solution/268_Missing_Number/Missing_Number.cpp" target="_blank" rel="external">github</a><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">missingNumber</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ret = nums.size();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; nums.size();i++)</span><br><span class="line">        &#123;</span><br><span class="line">            ret ^= nums[i];</span><br><span class="line">            ret ^= i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>初看这道题，没有什么思路，我想了很长时间。后来发现，如果能将数组nums分成两部分，第一部分为{nums[0], nums[2], …}，第二部分为{nums[1], nums[3], …}，且第一部分的数都小于第二部分。那么就可以满足题目的要求顺序了。</p>
+<p>将数组分成两部分，可以用获得第K大的数算法（即快排只对一半的元素递归），时间复杂度是O(n)。这样得到一个数组，前n/2的数都小于后n/2的数，再将其分别移动到对应的偶数位和奇数位上去。</p>
+<p>照此思路写好程序，发现不AC,原来数组中的数可能会重复。如果数组中第n/2大的数重复多个，那么这些数可能被分到第一个区间，也可能被分到第二个区间，这样对其作移动之后，可能两个相同的数是相邻的，不能满足顺序要求。</p>
+<h2 id="u5927_u795E_u7684_u7B54_u6848"><a href="#u5927_u795E_u7684_u7B54_u6848" class="headerlink" title="大神的答案"></a>大神的答案</h2><p>后来参考Discuss中<a href="https://leetcode.com/discuss/77133/o-n-o-1after-medan-virtal-indexing" target="_blank" rel="external">大神的解答</a>。</p>
+<p>基本思路如下:</p>
+<p>1.先找出第 n/2 大的数，设其为pivot。 时间复杂度O(n).</p>
+<p>2.对数组遍历一次，将数组三分，小于pivot放在前面，等于pivot放在中间，大于pivot放在后面。<br>三分像是变形的快排，可以参考<a href="https://en.wikipeda.org/wiki/Dutch_atioal_fag_problem" target="_blank" rel="external">荷兰国旗问题</a>。</p>
+<p>3.小于pivot的数要移动到 {nums[0], nums[2], nums[4], …}等偶数位上，且尽量放在后面。大于pivot的数移动到{nums[1], nums[3], ..}等奇数位上，且尽量放在前面。剩下的位置放等于pivot的数，位于偶数位小的下标和奇数位大的下标，这样等于pivot的数就不会相邻了。</p>
+<p>Step.3可以和Step.2合为一步，原作者使用了一个宏:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">define</span>&gt;A(i) nums[(<span class="number">1</span>+<span class="number">2</span>*(i)) % (n|<span class="number">1</span>)]</span></span><br></pre></td></tr></table></figure></p>
+<p>(n | 1)的含义为:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(!(n % <span class="number">2</span>))</span><br><span class="line">    n = n + <span class="number">1</span>;</span><br></pre></td></tr></table></figure></p>
+<p>这样对应关系为:</p>
+<blockquote>
+<p>A(0) : nums[1].<br>A(1) : nums[3].<br>A(2) : nums[5].<br>A(3) : nums[7].<br>A(4) : nums[9].<br>A(5) : nums[0].<br>A(6) : nums[2].<br>A(7) : nums[4].<br>A(8) : nums[6].<br>A(9) : nums[8].</p>
+</blockquote>
+<p>在实现Step.2的代码时，就将大于pivot的数放A的前部，等于放中间，小于放后面。非常巧妙的完成了分别移动到奇数位、偶数位，并且将等于pivot的数尽量错开。</p>
+<p>在实现代码时，我发现STL中找到n大的函数nth_element要比自己实现的快。查看源码， nth_element是这样实现的：</p>
+<p>1.数组长度 &lt; 3，采用插入排序的思想。长度 &gt; 3，采用快速排序artition的思想。</p>
+<p>2.artition时，pivot选择首元素、尾元素、中间元素的中值。</p>
+<p>代码：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">cass Solution&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">wiggleSort</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = nums.size();</span><br><span class="line">        <span class="comment">// Finda medan.</span></span><br><span class="line">       <span class="keyword">auto</span> midptr = nums.begin() + n / <span class="number">2</span>;</span><br><span class="line">        nth_element(nums.begin(), midptr, nums.end());</span><br><span class="line">        <span class="keyword">int</span> pivot = *midptr;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// if even number: ase = n + 1; else ase = n</span></span><br><span class="line">        <span class="keyword">int</span> ase = n | <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="preprocessor">#<span class="keyword">define</span>&gt;A(i) nums[((i) * <span class="number">2</span> + <span class="number">1</span>) % ase]</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> low = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> mid = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> high = n - <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(mid &lt;= high)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>&gt;A(mid) &gt; pivot)</span><br><span class="line">            &#123;</span><br><span class="line">                sap&gt;A(mid++),&gt;A(low++));</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>&gt;A(mid) &lt; pivot)</span><br><span class="line">            &#123;</span><br><span class="line">                sap&gt;A(mid),&gt;A(high--));</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                mid++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -357,30 +358,18 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Leetcode/" rel="tag">#Leetcode</a>
-          
-            <a href="/tags/算法/" rel="tag">#算法</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/03/leetcode-312-Burst-Balloons/" rel="next" title="Leetcode 312.Burst Balloons">
-                <i class="fa fa-chevron-left"></i> Leetcode 312.Burst Balloons
+              <a href="/2016/03/23/Union-Find-Set-的应用/" rel="next" title="Union-Find Set 的应用">
+                <i class="fa fa-chevron-left"></i> Union-Find Set 的应用
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/06/Leetcode-Single-Number-I-II-III/" rel="prev" title="Leetcode Single Number I/II/III (136/137/260)">
-                Leetcode Single Number I/II/III (136/137/260) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -406,8 +395,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/06/leetcode-268-Missing-Number/"
-           data-title="Leetcode 268.Missing Number" data-url="http://yoursite.com/2016/03/06/leetcode-268-Missing-Number/">
+      <div class="ds-thread" data-thread-key="2016/03/24/Leetcode-324-Wiggle-Sort-II/"
+           data-title="Leetcode 324 Wiggle Sort II" data-url="http://yoursite.com/2016/03/24/Leetcode-324-Wiggle-Sort-II/">
       </div>
     
   </div>
@@ -528,7 +517,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-_u6C42_u548C_u6CD5"><span class="nav-number">1.</span> <span class="nav-text">1.求和法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-_u4F4D_u64CD_u4F5C"><span class="nav-number">2.</span> <span class="nav-text">2.位操作</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u5927_u795E_u7684_u7B54_u6848"><span class="nav-number">1.</span> <span class="nav-text">大神的答案</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
